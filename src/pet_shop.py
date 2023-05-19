@@ -8,11 +8,6 @@ def get_pet_shop_name(pet_shop):
 def get_total_cash(pet_shop):
     return pet_shop["admin"]["total_cash"]
 
-def find_pet_by_name(pet_shop, pet_name):
-    for pet in pet_shop["pets"]:
-        if pet["name"] == pet_name:
-            return pet
-
 def add_or_remove_cash(pet_shop, cash):
     pet_shop["admin"]["total_cash"] += cash
 
@@ -35,4 +30,9 @@ def get_pets_by_breed(pet_shop, pet_breed):
             pets_by_breed.append(pet)
     return pets_by_breed
 
+def find_pet_by_name(pet_shop, pet_name):
+    for pet in pet_shop["pets"]:
+        if pet["name"] == pet_name:
+            return pet
 
+            
